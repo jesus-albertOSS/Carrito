@@ -1,19 +1,20 @@
 package com.example.application.model;
 
-public class Videojuego {
-    private String nombre;
-    private double precio;
+public class Videojuego extends Producto {
 
-    public Videojuego(String nombre, double precio) {
-        this.nombre = nombre;
-        this.precio = precio;
+    private String imagenUrl;
+
+    public Videojuego(String nombre, double precio, String imagenUrl) {
+        super(nombre, precio);
+        this.imagenUrl = imagenUrl;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getImagenUrl() {
+        return imagenUrl;
     }
 
-    public double getPrecio() {
-        return precio;
+    @Override
+    public String getCategoria() {
+        return "Videojuego";
     }
 }
